@@ -1,0 +1,15 @@
+Circuito RC
+*First Homework from Electronic III
+*Student: Jose Lopez
+
+vin 1 0 ac pulse(0 1 0u 0u 0u 1m 0u)    ;Pulse Source
+r1 1 2 10k                              ;Resistor 10K ohm
+a1 2 0 cap 
+.model cap capacitoric (c=100nf ic=2)   ;Capacitor with initals conditions
+
+
+.control
+tran 10n 6m uic
+gnuplot C1 v(1) v(2) 
+.endc
+.end

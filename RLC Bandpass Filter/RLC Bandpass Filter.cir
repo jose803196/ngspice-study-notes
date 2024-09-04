@@ -1,0 +1,18 @@
+RLC Bandpass Filter
+*Bandpass Filter
+*Student: Jose Lopez
+
+vin 1 0 dc 0 ac 30      ;AC Source
+l1 1 2 50mh             ;Inductance
+c1 2 3 127nf            ;Capacitance
+r1 3 0 63               ;Resistance
+
+.control
+
+*AC analysis from 1 KHz to 10 KHz
+ac dec 100 100 10k 
+gnuplot Filter v(3)                     ;Plot gain
+gnuplot Filter2 vdb(3)                   ;Plot gain in db
+gnuplot Filter3 phase(v(3))             ;Plot phase  
+.endc 
+.end 

@@ -8,4 +8,5 @@
     <li>RLC Bandpass Filter.</li>
     <li>RLC Bandstop Filter.</li>
     <li>RC o RL Highpass Filter.</li>
+    <li>RC o RL Lowpass Filter.</li>
 </ul>

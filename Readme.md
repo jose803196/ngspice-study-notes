@@ -7,4 +7,5 @@
     <li>Ciruit RC with Pulse Source (homework 1)</li>
     <li>RLC Bandpass Filter.</li>
     <li>RLC Bandstop Filter.</li>
+    <li>RC o RL Highpass Filter.</li>
 </ul>

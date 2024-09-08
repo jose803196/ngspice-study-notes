@@ -1,0 +1,9 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+\usepackage{siunitx} 
+
+\begin{document}
+    \begin{circuitikz}\draw
+        (0,0) to[sV=$30\si{\volt}$,name=source] ++ (0,4)node[label, above]{1} to[R=$63\si{\ohm}$]++(4,0)node[label, above]{2} to[L=$50\si{\milli\henry}$]++(0,-2) node[label, right]{3} to[C=$127\si{\nano\farad}$] ++(0,-2) node[ground](){} node[label, right, red]{0} -| (source.west)
+    ;\end{circuitikz}
+\end{document}

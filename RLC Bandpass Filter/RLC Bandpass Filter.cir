@@ -12,7 +12,7 @@ r1 3 0 63               ;Resistance
 *AC analysis from 1 KHz to 10 KHz
 ac dec 100 100 10k 
 gnuplot Filter v(3)                     ;Plot gain
-gnuplot Filter2 vdb(3)                   ;Plot gain in db
+gnuplot Filter2 vdb(3)                  ;Plot gain in db
 gnuplot Filter3 phase(v(3))             ;Plot phase  
 .endc 
 .end 

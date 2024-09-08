@@ -1,17 +1,17 @@
-RC o RL Highpass Filter
-*Highpass Filter
+RC or RL Lowpass Filter
+*Lowpass Filter
 *Student: Jose Lopez
 
 vin 1 0 dc 0 ac 1      ;AC Source
 
 *First circuit
 
-*c1 1 2 200nf                ;Capacitance
-*r1 2 0 1k                   ;Resistance
+*c1 2 0 200nf                ;Capacitance
+*r1 1 2 1k                   ;Resistance
 
 *Second circuit
-r2 1 2 1000                     ;Resistance
-l1 2 0 200mh                    ;Inductance
+r2 2 0 1000                     ;Resistance
+l1 1 2 200mh                    ;Inductance
 
 .control
 *AC analysis from 1 Hz to 10 KHz

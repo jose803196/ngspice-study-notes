@@ -1,0 +1,16 @@
+Half Wave Rectifier
+*Half Wave Rectifier
+*Student: Jose Lopez
+
+VIN 1 0 AC SIN(0 10 1k 0 0 0)
+D1 1 2 D1N4148
+R1 2 0 1K
+
+*Diode model statement
+.MODEL D1N4148 D(Is=0.1pA Rs=16 CJO=2p Tt=12n Bv=100 Ibv=0.1p)
+
+.CONTROL
+TRAN 500n 3m
+gnuplot Wave v(2) title "Output signal"
+.ENDC
+.END

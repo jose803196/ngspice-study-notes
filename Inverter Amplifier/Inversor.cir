@@ -1,0 +1,23 @@
+*Amplificador inversor
+*Estudiante: Jose G. Lopez
+*Asignatura: Instrumentación Eléctronica.
+.include tl081.cir
+
+*Alimentacion para el amplificador
+v1 vcc 0 dc 15V
+v2 vee 0 dc -15V
+
+*Fuente senoidal
+vin 1 0 ac sin(0 1 1k 0 0 0)
+
+*Circuito inversor
+rs 1 2 10k
+rf 2 4 100k
+XTL081 0 2 vcc vee 4 tl081
+
+.control
+tran 500n 10m
+gnuplot Inversor v(1) v(4) title "Input and output signal"
+.endc
+.end
+

@@ -1,0 +1,34 @@
+*Instrumental Amplifier
+*Estudiante: Jose G. Lopez
+*V-26.893.008
+*Asignatura: Diseño de equipo electronico
+
+.include tl081.cir
+
+*Alimentación
+v1 vcc 0 dc 15V
+v2 vee 0 dc -15V
+
+*Señales de entrada
+vin1 1 0 ac sin(0 3.3 1k 0 0 0)
+vin2 2 0 ac sin(0 5 1k 0 0 0)
+
+*Valores de resistencias
+.param RGil=3.9k
+r11 3 5 RGil
+r12 4 6 RGil
+rgain 3 4 18k
+r21 5 7 RGil
+r22 6 8 RGil
+r31 7 9 RGil
+r32 8 0 RGil
+
+XTL081 1 3 vcc vee 5 tl081
+XTL082 2 4 vcc vee 6 tl081
+XTL083 8 7 vcc vee 9 tl081
+
+.control
+tran 50n 10ms
+gnuplot Instrumental v(9) title "Amplificador Instrumental"
+.endc
+.end

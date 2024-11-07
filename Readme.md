@@ -10,4 +10,6 @@
     <li>RC o RL Highpass Filter.</li>
     <li>RC o RL Lowpass Filter.</li>
     <li>Half Wave Rectifier(D1N4148)</li>
+    <li>Inverter Amplifier</li>
+    <li>Instrumental Amplifier</li>
 </ul>

@@ -1,0 +1,11 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+%\node[label, above]{1}
+\begin{document}
+    \begin{circuitikz}\draw
+        (0,0) node[op amp] (OA) {}
+        (OA.-) node[label, below]{2} to[R=$R_{s}$,*-*] ++(-2,0) to[short,o-,label=$V_{i}$] node[label, below]{1} ++(-0.0,0)
+        (OA.+) node[ground](){} node[label, below left]{\textcolor[rgb]{1.00,0.00,0.00}{0}}
+        (OA.-) --++(0,1) to[R=$R_{f}$] ++(2.1,0) -| (OA.out) node[label,below]{4}
+    ;\end{circuitikz}
+\end{document}

@@ -1,0 +1,14 @@
+*Basic circuit with switch
+*Student: Jose Lopez
+Vin 1 0 AC sin(0 6 1k 0 0 0)
+R1 1 2 10k
+S1 2 3 3 0 SW_MOD
+.model SW_MOD SW (ROFF=1E+12 RON=1)
+R2 3 0 10k
+.control
+    run
+    tran 0.01m 5m
+    gnuplot Prueba V(1) V(3) title "Basic Switch"
+    print V(3)
+.endc
+.end

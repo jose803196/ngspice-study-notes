@@ -12,4 +12,5 @@
     <li>Half Wave Rectifier(D1N4148)</li>
     <li>Inverter Amplifier</li>
     <li>Instrumental Amplifier</li>
+    <li>Basic circuit with switch</li>
 </ul>
